@@ -148,4 +148,68 @@ var isValidDate = new RegExp(/^[0-9]{4}$/);
 
 //^(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[/\\/](19|20)\d{2}$
 
+var sentence = 'hello';
+
+var reverse = function (sentence) {
+    index = sentence.length-1;
+    var newSentence = null;
+    while(index >= 0)
+    {
+        newSentence = newSentence + sentence[index];
+        index++;
+    }
+    //console.log(newSentence);
+    return newSentence;
+};
+
+
+
+var getFactorial = function(number) {
+    var index = 1;
+    var factor = 1;
+    if (typeof number != 'number')
+        throw number + 'is not a number';
+
+    if(number > 0){
+        while(index <= number ){
+            factor *= index;
+            index++;
+        }
+    }
+    return factor;
+}
+console.log('Factorial is: ',getFactorial(5));
+
+var truncateParagraph = function(paragraph, number){
+    var newParagraph = paragraph.substring(0,number);
+    return newParagraph;
+};
+var para = 'Go to client machine with a remote connection.';
+console.log('Paragraph is: ', para);
+var trunck = 10;
+console.log('Truncate in ', 10, 'characters.');
+console.log('Paragraph truncate is: ', truncateParagraph(para,trunck));
+
+
+/*** functions anonymous and autoexecutables ***/
+(function(){
+    console.log('Hello World..!!!')
+})();
+
+
+var sayHello = function(name){
+    if (name)
+        console.log('Hello ' + name + ' ..!!!');
+    else
+        console.log('Hello World..!!!');
+};
+
+(function(name){
+    if (name)
+        console.log('Hello ' + name + ' ..!!!');
+    else
+        console.log('Hello World..!!!');
+})('oz');
+
+
 
