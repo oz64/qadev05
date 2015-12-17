@@ -1,2 +1,2 @@
 # qadev05
-This repository is for javascript
+This repository is for practice javascript
